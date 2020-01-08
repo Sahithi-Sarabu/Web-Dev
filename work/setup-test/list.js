@@ -2,7 +2,7 @@ const path = require('path');
 
 const people = `
 Name           |  NEUID   | Slack handle | github ID
-Brett Ritter   | ???      | @swiftone    | swiftone
+Sahithi Sarabu |001067925 | @Sahithi Sarabu| Sahithi-Sarabu
 
 `.split('\n').filter( truthy => truthy );
 
