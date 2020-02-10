@@ -31,14 +31,14 @@ const gameWeb = {
 			        </div>
 			        <div>${gameWeb.guessedList(game.users[uid].wordsGuessed)}</div>
 			    </div>
-					<script type= "text/javascript">
-						function checkSpace(event){
-							if(event.which ==32){
-								event.preventDefault();
-								return false;
-							}
-						}
-					</script>	
+			    <script type= "text/javascript">
+				function checkSpace(event){
+					if(event.which ==32){
+						event.preventDefault();
+						return false;
+					}
+				}
+			    </script>	
 			  </body>
 			  </head>
 			  </html>`;
