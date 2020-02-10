@@ -13,11 +13,11 @@ const newUser = {
 			        ${newUser.createUser()}
 			       <script type= "text/javascript">
 			          function checkSpace(event){
-			      	     if(event.which ==32){
-						    event.preventDefault();
-						    return false;
+			            if(event.which ==32){
+						  event.preventDefault();
+						  return false;
 					     }
-				      }
+				       }
 			      </script>	
 			    </div>
 			  </body>
@@ -28,8 +28,8 @@ const newUser = {
 		createUser: function(){
 			return `
 			<form action="/createUser" method="post">
-			     <input type="text" id="text-box" name="username" value="" placeholder="Enter your name" onkeypress="checkSpace(event)" required/><br>
-			     <input type="submit" id= "create-btn" value="Create"/>
+			  <input type="text" id="text-box" name="username" value="" placeholder="Enter your name" onkeypress="checkSpace(event)" required/><br>
+			  <input type="submit" id= "create-btn" value="Create"/>
 			  </form>
 		    `
 		}

@@ -33,11 +33,11 @@ const gameWeb = {
 			        </div>
 			       <script type= "text/javascript">
 			          function checkSpace(event){
-			      	     if(event.which ==32){
-						    event.preventDefault();
-						    return false;
+			            if(event.which ==32){
+			              event.preventDefault();
+						  return false;
 					     }
-				      }
+					   }
 			      </script>	
 			  </body>
 			  </head>
@@ -49,8 +49,8 @@ const gameWeb = {
 			return `
 			<div>
 			  <form action="/guessWord" method="post">
-			     <input type="text" id= "guess-text" name="guess" value="" placeholder="Guess your Word" ;onkeypress="checkSpace(event)" required/><br>
-			     <input type="submit" id= "submit-btn" value="Submit"/>
+			    <input type="text" id= "guess-text" name="guess" value="" placeholder="Guess your Word" ;onkeypress="checkSpace(event)" required/><br>
+			    <input type="submit" id= "submit-btn" value="Submit"/>
 			  </form>
 		   </div> `;
 		},
