@@ -1,0 +1,198 @@
+h1,.game-head, .status-of-gameOver {
+	text-align:center;
+	font-family: 'Rancho', cursive;
+	font-size: 40px;
+	color :#686868;
+}
+
+.game-head,.status-of-gameOver{
+	font-size: 28px;
+}
+
+
+.outer-display {
+	resize: auto;
+	height: 430px;
+	width: 100%;
+	display:grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.words-list {
+	resize: auto;
+	border: 2px solid #686868;
+	list-style :none;
+	height : 430px;
+	overflow: scroll;
+	border-radius : 10px;
+	flex-direction: column;
+	margin-left:90px;
+	position: relative;
+	margin-top: 0;
+	width:200px;
+}
+
+.display {
+	resize: auto;
+	width: 450px;
+	height: 430px;
+}
+
+.status-of-game{
+	resize: auto;
+	color: #686868;
+	font-family: 'Rancho', cursive;
+	font-size: 20px;
+	margin-left: 6%;
+	positon:relative;
+	margin-top: 80px;
+}
+
+.turns-display{
+	resize: auto;
+	color : #686868;
+	font-family : 'Rancho', cursive;
+	font-size: 20px;
+	width: 100%;
+	margin-left: 13%;
+	position: relative;
+}
+
+.status-of-gameOver {
+	text-align:center;
+}
+
+.gameOver-display {
+	margin-top:12%;
+	width: 100%;
+	color: #686868;
+	font-family: 'Rancho', cursive;
+}
+
+#gameOver-btn {
+	width:30%;
+	margin-left:35%;
+	background:none;
+	border-radius: 10px;
+	color: #686868;
+	font-family: 'Rancho', cursive;
+	font-size: 30px;
+}
+
+#guess-text{
+	resize: auto;
+	font-family: 'Rancho', cursive;
+	margin-left: 12%;
+	overflow:hidden;
+	width : 40%;
+	font-size: 22px;
+	border: none;
+	outline: none;
+	border-bottom: 2px solid #686868;
+	color: #686868;
+	background : none;
+	position: relative;
+	margin-top: 60px;
+}
+
+#submit-btn {
+	resize: auto;
+	width: 40%;
+	margin-left: 12%;
+	background :none;
+	border: 2px solid #686868;
+	colour: #686868;
+	padding: 5px;
+	float:center;
+	border-radius :10px;
+	font-family : 'Rancho', cursive;
+	font-size: 25px;
+	margin-top : 30px;
+	margin-down: 50px;
+	position:relative;
+	color:#686868;
+}
+
+.word,.word-typed{
+	resize: auto;
+	color : #686868;
+	font-family: 'Rancho', cursive;
+	font-size: 20px;
+	position: relative;
+	padding: 5px;
+}
+
+.game-body,.gameOver-body {
+	background-image: url(background4.jpg);
+	background-size: cover;
+	background-repeat: repeat;
+	resize: auto;
+}
+
+.words-guess {
+	display:flex;
+	border: 2px solid #686868;
+	list-style :none;
+	height : 430px;
+	overflow: scroll;
+	border-radius :10px;
+	flex-direction: column;
+	margin-right:50px;
+	position:relative;
+	margin-top:-3px;;
+	margin-left: 30px;
+	padding:5px;
+	resize: auto;
+}
+
+.user-head {
+	text-align:left;
+	font-size: 40px;
+	margin-bottom: 50px;
+	text-decoration: undeline;
+	text-decoration-color: solid #686868;
+	margin-bottom: 30px;
+}
+
+.user-body {
+	background-image: url(background4.jpg);
+	background-size: cover;
+	background-repeat:repeat;
+	resize: auto;
+	font-family: 'Rancho', cursive;
+	width : 280px;
+	position: relative;
+	color: #686868;
+	margin-left: 38%;
+	margin-top: 12%;
+}
+
+#text-box {
+	background-image: url(user.jpg);
+	background-size: 38px;
+	background-repeat: no-repeat;
+	position: left;
+	font-family: 'Rancho', cursive;
+	padding-left: 38px;
+	width: 88%;
+	overflow:hidden;
+	font-size: 30px;
+	border: none;
+	outline: none;
+	border-bottom: 2px solid #686868;
+	margin-botton: 50px;
+	color: #686868;
+}
+
+#create-btn {
+	margin-top : 20px;
+	width: 100%;
+	background :none;
+	border: 2px solid #686868;
+	padding: 5px;
+	float:center;
+	border-radius :10px;
+	font-family : 'Rancho', cursive;
+	font-size: 20px;
+	color: #686868;
+}
