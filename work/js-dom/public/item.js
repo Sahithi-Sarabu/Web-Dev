@@ -73,6 +73,6 @@
 		  return false;
 	  }
   });
-	addButton.disabled = true;
+    addButton.disabled = true;
 	renderList(items);
 })();
