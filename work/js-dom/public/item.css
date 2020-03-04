@@ -1,0 +1,60 @@
+.add-quantity, .reduce-quantity, .delete{
+	border-radius:50%;
+	background: none;
+	font-family: 'Rancho', cursive;
+	font-size: 20px;
+	resize: auto;
+}
+
+body{
+	background-image: url('background.jpg');
+	background-size: cover;
+	resize: auto;
+}
+
+h2{
+	font-family: 'Rancho', cursive;
+	font-size: 35px;
+	text-align:center;
+}
+
+.outgoing{
+	margin-top: 10px;
+	margin-left: 35%;
+	resize: auto;
+}
+
+.container{
+	float:right;
+	resize:auto;
+}
+
+.to-add{
+	width: 30%;
+	font-size: 25px;
+	font-family: 'Rancho', cursive;
+	border-radius: 15%;
+}
+
+#button{
+	width: 10%;
+	font-size: 25px;
+	border-radius: 15%;
+	font-family: 'Rancho', cursive;
+	background: none;
+}
+
+.items{
+	resize: auto;
+	height: 500px;
+	width: 550px;
+	list-style: none;
+	margin-left: 25%;
+	font-family: 'Rancho', cursive;
+	font-size: 25px;
+	color: #686868;
+}
+
+li:hover{
+	background-color: #99ffcc;
+}
