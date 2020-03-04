@@ -64,7 +64,7 @@
 
   newTaskEl.addEventListener('keyup', function (event) {
 	  const text = event.target.value;
-	  addButton.disabled = !text;
+      addButton.disabled = !text;
   });
   
   newTaskEl.addEventListener('keypress', function(event){
