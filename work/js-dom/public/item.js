@@ -16,9 +16,9 @@
   const newTaskEl = document.querySelector('.to-add');
 
   const renderList = (items) => {
-    list.innerHTML = Object.keys(items).map( (key) => {
-      const item = items[key];
-      return `
+	  list.innerHTML = Object.keys(items).map( (key) => {
+		const item = items[key];
+		return `
         <li>
         	<span data-id="${key}">
             	<button class="delete">x</button>
@@ -38,7 +38,6 @@
   
   list.addEventListener('click', function (event){
 	  const id = event.target.parentElement.dataset.id;
-	  
 	  if(event.target.classList.contains('add-quantity')){
 		  items[id].quantity++;
 		  renderList(items);
@@ -56,27 +55,24 @@
   });
 
   addButton.addEventListener('click', function (event) {
-	  
-    const text = newTaskEl.value;
-
-    items[ nextId() ] = { item: text, quantity: 0 };
-    renderList(items);
-    newTaskEl.value = '';
-    addButton.disabled = true;
+	  const text = newTaskEl.value;
+	  items[ nextId() ] = { item: text, quantity: 0 };
+	  renderList(items);
+	  newTaskEl.value = '';
+	  addButton.disabled = true;
   });
 
   newTaskEl.addEventListener('keyup', function (event) {
-    const text = event.target.value;
-    addButton.disabled = !text;
+	  const text = event.target.value;
+	  addButton.disabled = !text;
   });
   
   newTaskEl.addEventListener('keypress', function(event){
 	  if(event.which ==32){
 		  event.preventDefault();
 		  return false;
-		 }
+	  }
   });
-
-  addButton.disabled = true;
-  renderList(items);
+	addButton.disabled = true;
+	renderList(items);
 })();
