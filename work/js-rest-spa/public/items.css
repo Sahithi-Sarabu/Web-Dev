@@ -3,8 +3,8 @@
 	background: none;
 	font-family: 'Bradley Hand', cursive;
 	font-size: 20px;
-    resize: auto;
-    color: #686868;
+	resize: auto;
+	color: #686868;
 }
 
 body{
@@ -14,8 +14,8 @@ body{
 }
 
 .login{
-    margin-top: 15%;
-    margin-left: 35%;
+	margin-top: 15%;
+	margin-left: 35%;
 }
 
 .status{
