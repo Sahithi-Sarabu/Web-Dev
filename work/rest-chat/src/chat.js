@@ -25,7 +25,6 @@ function renderPage() {
     renderErrors(appState.error);
 }
 
-
 function renderChat( messagesList, usersList) {
     page.innerHTML = `
     <h2>Just Chat</h2>
@@ -47,7 +46,7 @@ function renderUsers( usersList ){
         return `
         <li>${user}</li>`;
     }).join('');
-};
+}
 
 function renderMessages( messages ) {
     const chat = page.querySelector('.messages');
@@ -62,7 +61,7 @@ function renderMessages( messages ) {
         <span class="message">${message.message}</span>
         </li>`;
     }).join('');
-};
+}
 
 function renderLogin( show ) {
     page.innerHTML = '<div class="login"><input class="user-name" placeholder="Enter your name"/><button class="add-user">Login</button></div>';
