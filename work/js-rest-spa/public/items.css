@@ -1,0 +1,111 @@
+.delete{
+	border-radius:50%;
+	background: none;
+	font-family: 'Bradley Hand', cursive;
+	font-size: 20px;
+	resize: auto;
+	color: #686868;
+}
+
+body{
+	background-image: url('background.jpg');
+	background-size: cover;
+	resize: auto;
+}
+
+.login{
+	margin-top: 15%;
+	margin-left: 35%;
+}
+
+.status{
+	margin-left: 35%;
+	font-size: 25px;
+	font-family: 'Rancho', cursive;
+	resize: auto;
+	color: #686868;
+}
+
+.user-name, .item-name, .item-quantity{
+	width: 30%;
+	font-size: 25px;
+	font-family: 'Rancho', cursive;
+	border-radius: 15%; 
+	resize: auto;
+	color: #686868;
+}
+
+.add-user, .add{
+	width: 10%;
+	font-size: 25px;
+	border-radius: 15%;
+	font-family: 'Bradley Hand', cursive;
+	background: none;
+	resize: auto;
+	color: #686868;
+}
+
+h2{
+	text-align:center;
+	font-family: 'Rancho', cursive;
+	font-size: 40px;
+	color: #686868;
+}
+
+.logout-button{
+	float: right;
+	margin-right: 8%;
+	margin-top: -6%;
+	font-size: 25px;
+	border-radius: 15%;
+	font-family: 'Rancho', cursive;
+	background: none;
+	resize: auto;
+	color: #686868;
+}
+
+.outgoing{
+	margin-top: 10px;
+	margin-left: 28%;
+	resize: auto;
+}
+
+.items{
+	resize: auto;
+	height: 350px;
+	width: 550px;
+	list-style: none;
+	margin-left: 30%;
+	font-family: 'Rancho', cursive;
+	font-size: 25px;
+	color: #686868;
+}
+
+.container{
+	resize:auto;
+	margin-right: 0;
+	margin-left: 20px;
+	float: right;
+}
+
+.update-quantity{
+	font-family: 'Rancho', cursive;
+	font-size: 20px;
+	border-radius:10%;
+	resize: auto;
+	margin-right: 0;
+	color: #686868;
+}
+
+.quantity{
+	font-family:'Rancho', cursive;
+	font-size: 20px;
+	border-radius: 10%;
+	width: 80px;
+	resize: auto;
+	color: #686868;
+}
+
+li:hover{
+	background-color: #d980ff
+}
