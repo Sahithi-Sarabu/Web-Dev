@@ -1,0 +1,107 @@
+body{
+    background-image: url('background1.jpg');
+	background-size: cover;
+	resize: auto;
+}
+
+.status{
+	margin-left: 35%;
+	font-size: 25px;
+	font-family: 'Rancho', cursive;
+	resize: auto;
+}
+
+h2{
+	text-align:center;
+	font-family: 'Rancho', cursive;
+	font-size: 40px;
+}
+
+.logout-button{
+	float: right;
+	margin-right: 8%;
+	margin-top: -6%;
+	font-size: 25px;
+	border-radius: 15%;
+	font-family: 'Rancho', cursive;
+	background: none;
+	resize: auto;
+}
+
+.outgoing{
+	margin-top: 10px;
+	margin-left: 35%;
+	resize: auto;
+}
+
+.login{
+	margin-top: 15%;
+	margin-left: 35%;
+}
+
+.user-name, .new-message{
+	width: 30%;
+	font-size: 25px;
+	font-family: 'Rancho', cursive; 
+    resize: auto;
+    color :#686868;
+}
+
+.add-user, .add{
+	width: 10%;
+	font-size: 25px;
+	border-radius: 15%;
+    font-family: 'Rancho', cursive;
+    background: none;
+	resize: auto;
+}
+
+.message{
+	width: 10%;
+	font-size: 20px;
+	border-radius: 15%;
+    font-family: 'Rancho', cursive;
+    background: none;
+	resize: auto;
+}
+
+.time{
+    width: 10%;
+	font-size: 15px;
+	border-radius: 15%;
+    font-family: 'Rancho', cursive;
+    background: none;
+	resize: auto;
+}
+
+.messages{
+	resize: auto;
+	height: 350px;
+	width: 550px;
+	list-style: none;
+	margin-right: 30px;
+	font-family: 'Rancho', cursive;
+    font-size: 25px;
+    overflow: scroll;
+    border: 1px solid black;
+    padding-left: 20px;
+}
+
+.users{
+	resize: auto;
+	height: 350px;
+	width: 250px;
+	list-style: none;
+    margin-left: 200px;
+    margin-right: 100px;
+	font-family: 'Rancho', cursive;
+    font-size: 25px;
+    overflow: scroll;
+    border: 1px solid black;
+    padding-left: 20px;
+}
+
+.chat-content{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
