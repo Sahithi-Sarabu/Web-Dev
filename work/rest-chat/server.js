@@ -8,7 +8,6 @@ const chat = require('./chatInfo');
 app.use(express.static('./public'));
 app.use(cookieParser());
 
-
 app.get('/session', (req,res) => {
     const uID = req.cookies.uid;
     if(!uID){
@@ -45,7 +44,7 @@ app.delete('/session', (req, res) =>{
     delete chat.users[uID];
     res.sendStatus(200);
     return;
-})
+});
 
 app.get('/chat', (req,res) =>{
     const uID = req.cookies.uid;
@@ -78,6 +77,5 @@ app.post('/message', express.json(), (req,res) =>{
     chat.messages.push({ user: chat.users[uID], time: new Date().toLocaleTimeString(), message: message});
     res.json(Object.values(chat));
 });
-
 
 app.listen(PORT, () => console.log(`listening on http://localhost:${PORT}`));
