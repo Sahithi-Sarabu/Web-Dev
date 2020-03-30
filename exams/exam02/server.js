@@ -5,7 +5,6 @@ const PORT = 3000;
 let id = 0;
 const recipeInfo = require('./recipeInfo');
 
-
 app.use(express.static('./public'));
 app.use(cookieParser());
 
@@ -94,6 +93,5 @@ app.post('/recipes', express.json(), (req,res) => {
     recipeInfo.recipes[++id] = {id: id, title:title, author:name, ingredients:ingredients, instructions: procedure};
     res.json({error: '', result: recipeInfo.recipes[id]});
 })
-
 
 app.listen(PORT, () => console.log(`listening on http://localhost:${PORT}`));
