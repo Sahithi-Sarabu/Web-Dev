@@ -173,9 +173,6 @@ page.addEventListener('click', (e) => {
         const procedure = e.target.previousElementSibling.children[10].value;
         fetchAddRecipeDetails(title, ingredients, procedure)
         .then( result => {
-            /*appState.recipes = result.result;
-            appState.error = result.error;
-            renderPage();*/
             appState.error = result.error;
             renderRecipeDetails(result.result);
             renderErrors(appState.error);
