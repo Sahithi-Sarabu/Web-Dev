@@ -1,22 +1,22 @@
 body{
 	background-image: url('background3.jpg');
 	background-size: cover;
-    resize: auto;
+	resize: auto;
 }
 
 .status{
 	margin-left: 35%;
 	font-size: 30px;
 	font-family: 'Rancho', cursive;
-    resize: auto;
-    color: #f2f2f2;
+	resize: auto;
+	color: #f2f2f2;
 }
 
 h2{
 	text-align:center;
-	font-family: 'Garamond';
-    font-size: 40px;
-    color: #f2f2f2;
+	font-family: 'Garamond', cursive;
+	font-size: 40px;
+	color: #f2f2f2;
 }
 
 .login{
@@ -31,7 +31,7 @@ h2{
 	font-size: 25px;
 	border-radius: 15%;
 	font-family: 'Garamond', cursive;
-    resize: auto;
+	resize: auto;
 }
 
 .user-name{
@@ -46,46 +46,46 @@ h2{
 	font-size: 25px;
 	border-radius: 15%;
 	font-family: 'Rancho', cursive;
-    resize: auto;
+	resize: auto;
 }
 
 .home, .add, .add-recipe{
-    font-size: 25px;
+	font-size: 25px;
 	border-radius: 15%;
 	font-family: 'Garamond', cursive;
-    resize: auto;
+	resize: auto;
 }
 
 .label-text{
-    font-size: 20px;
-    font-family: 'Garamond', cursive;
-    color: #f2f2f2;
+	font-size: 20px;
+	font-family: 'Garamond', cursive;
+	color: #f2f2f2;
 }
 
 .title{
-    width: 20%;
-    font-size: 20px;
-    font-family: 'Garamond', cursive;
+	width: 20%;
+	font-size: 20px;
+	font-family: 'Garamond', cursive;
 }
 
 textarea{
-    width: 50%;
-    font-size: 20px;
-    font-family: 'Garamond', cursive;
+	width: 60%;
+	font-size: 20px;
+	font-family: 'Garamond', cursive;
 }
 
 .text{
-    font-size: 25px;
-    font-family: 'Garamond', cursive;
-    color: #f2f2f2;
+	font-size: 25px;
+	font-family: 'Garamond', cursive;
+	color: #f2f2f2;
 }
 
 .ingredients-list, .recipes{
-    font-size: 25px;
-    font-family: 'Garamond', cursive;
-    color: #f2f2f2;
+	font-size: 25px;
+	font-family: 'Garamond', cursive;
+	color: #f2f2f2;
 }
 
 a {
-    color: #ffff00;
+	color: #ffff00;
 }
