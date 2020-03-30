@@ -11,7 +11,6 @@ export const fetchLoginStatus = () => {
     });
 }
 
-
 export const fetchLogin = (username) =>{
     return fetch('/session', {
         method: 'POST',
