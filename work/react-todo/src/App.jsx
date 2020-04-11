@@ -1,25 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState, useEffect } from 'react';
 import './App.css';
+import { fetchLoginStatus } from './services';
+import Login from './Login';
+import Todo from './Todo';
+//import UserContext from './UserContext';
 
-function App() {
+const App = () => {
+  const [userState, setUserState] = useState({ isLoggedIn: false});
+  const [error, setError] = useState('');
+
+  useEffect( () => {
+    fetchLoginStatus()
+    .then( (userInfo) => {
+       setUserState({ 
+        isLoggedIn: true,
+        username: userInfo.data.username
+      })
+    })
+  }, []);
+
+  const login = (username) => {
+     setUserState({ 
+       isLoggedIn: true,
+       username
+     });
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    //<UserContext.Provider value = { [userState, setUserState] }>
+      <div className="App">
+        {userState.isLoggedIn ? <Todo userState={userState} setUserState= {setUserState} setError={setError} /> : <Login onLogin={ login } setError={ setError }/> }
+        <p className ="status">{ error }</p>
+      </div>
+    //</UserContext.Provider>
   );
 }
 
