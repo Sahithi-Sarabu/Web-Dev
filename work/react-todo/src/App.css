@@ -1,7 +1,18 @@
-.App {
-  text-align: center;
+.light {
+  background-color: white;
+  color: black;
 }
 
-.task.complete { 
-  text-decoration: line-through;
+.dark {
+  background-color: black;
+  color: white;
+}
+
+.colorful {
+  background-color: #ccff99;
+  color: #336600;
+}
+
+body{
+  margin: 0;
 }

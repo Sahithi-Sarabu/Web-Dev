@@ -3,11 +3,12 @@ import './App.css';
 import { fetchLoginStatus } from './services';
 import Login from './Login';
 import Todo from './Todo';
-//import UserContext from './UserContext';
+import ThemeContext from './ThemeContext';
 
 const App = () => {
   const [userState, setUserState] = useState({ isLoggedIn: false});
   const [error, setError] = useState('');
+  const [theme, setTheme] = useState('light');
 
   useEffect( () => {
     fetchLoginStatus()
@@ -27,12 +28,12 @@ const App = () => {
   };
 
   return (
-    //<UserContext.Provider value = { [userState, setUserState] }>
-      <div className="App">
+    <ThemeContext.Provider value = { [theme, setTheme] }>
+      <div className= {theme} >
         {userState.isLoggedIn ? <Todo userState={userState} setUserState= {setUserState} setError={setError} /> : <Login onLogin={ login } setError={ setError }/> }
         <p className ="status">{ error }</p>
       </div>
-    //</UserContext.Provider>
+    </ThemeContext.Provider>
   );
 }
 
