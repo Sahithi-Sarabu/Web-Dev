@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import {fetchTask, fetchUpdateTask, fetchAllTodos, deleteTask} from './services';
 import Filter from './Filter'
 
-
 const TodoDisplay = ({todos,  userState , setTodos, setError, setUserState, setTheme}) =>{
     const [newtodo, setTodo] = useState('');
     const [filterState, setFilterState] = useState('All');
