@@ -28,8 +28,7 @@ const Filter = ({onFilter, onSort, onRefresh}) =>{
         onSort('');
         onFilter('All');
     }
-
-
+    
     return (
         <div className="filters">
             <input className="radio" type="radio" id="radio" name="task" onClick={sortAsc} value="Sort Ascending Name"/>
