@@ -23,7 +23,7 @@ const Todo = ({ userState, setUserState, setError }) => {
         fetchTheme(userState.username)
         .then( userInfo =>{
             const selected = userInfo.data.theme;
-            if(selected == 'light' || selected == 'dark'){
+            if(selected === 'light' || selected === 'dark'){
                 setTheme(selected);
             }else{
                 setTheme('colorful');
@@ -31,6 +31,12 @@ const Todo = ({ userState, setUserState, setError }) => {
         })
         .catch( err =>{
             setError(err.message);
+            if(err.message =='no valid session' || err.message == 'action not permitted'){
+                setUserState({
+                    isLoggedIn: false
+                });
+                setTheme('light');
+            }
         });
     }
 
@@ -38,6 +44,7 @@ const Todo = ({ userState, setUserState, setError }) => {
         setUserState({
             isLoggedIn: false
         });
+        setTheme('light');
     };
 
     useEffect( () => {
@@ -56,6 +63,12 @@ const Todo = ({ userState, setUserState, setError }) => {
         updateTheme(userState.username, newTheme)
         .catch( err =>{
             setError(err.message);
+            if(err.message =='no valid session' || err.message == 'action not permitted'){
+                setUserState({
+                    isLoggedIn: false
+                });
+                setTheme('light');
+            }
         });
     }
 
@@ -63,13 +76,16 @@ const Todo = ({ userState, setUserState, setError }) => {
         <div className="todo">
             <h2>To be Done</h2>
             <Logout onLogout={ logout } setError={ setError }/>
-            <select className="themes" onChange={changeTheme}>
-                <option>colorful</option>
-                <option>light</option>
-                <option>dark</option>
-            </select>
-            <AddToDo onSend={ send } userState={userState} setUserState= {setUserState} setError= {setError}/>
-            <TodoDisplay todos={ todos } userState={userState} setTodos={setTodos}/> 
+            <div className="theme">
+                <label className="themes">Select Theme </label>
+                <select className="themes" onChange={changeTheme}>
+                    <option>colorful</option>
+                    <option>light</option>
+                    <option>dark</option>
+                </select>
+            </div>
+            <AddToDo onSend={ send } userState={userState} setUserState= {setUserState} setError= {setError} setTheme={setTheme}/>
+            <TodoDisplay todos={ todos } userState={userState} setTodos={setTodos} setError= {setError} setUserState={setUserState} setTheme={setTheme}/> 
         </div>
     );
 };

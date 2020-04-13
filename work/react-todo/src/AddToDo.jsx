@@ -1,28 +1,35 @@
 import React, { useState} from 'react';
-//import UserContext from './UserContext';
 import {fetchTodo, fetchAllTodos} from './services';
 
-const AddToDo = ({onSend, userState, setUserState, setError}) => {
+const AddToDo = ({onSend, userState, setUserState, setError, setTheme}) => {
     const [todo, setTodo] = useState('');
 
     const sendTodo = (e) =>{
-        const task = {task: todo, status: false};
-        fetchTodo(task , userState.username)
-        .then( () =>{
-            setTodo('');
-            fetchAllTodos(userState.username)
-            .then( (todos) => {
-                onSend(todos.data);
-            }) 
-        })
-        .catch( err => {
-             setError(err.message);
-            if(err.message === 'no valid session' || err.message === 'action not permitted'){
-                setUserState({
-                    isLoggedIn: false
-                });
-            }
-        })
+        if(todo){
+            const task = {task: todo, done: false};
+            fetchTodo(task , userState.username)
+            .then( () =>{
+                setTodo('');
+                fetchAllTodos(userState.username)
+                .then( (todos) => {
+                    onSend(todos.data);
+                    setError('');
+                }) 
+            })
+            .catch( err => {
+                setError(err.message);
+                if(err.message === 'no valid session' || err.message === 'action not permitted'){
+                    setUserState({
+                        isLoggedIn: false
+                    });
+                    setTheme('light');
+                    setError('Login to access');
+                }
+            })
+        }
+        if(!todo){
+            setError('Message cannot be Empty');
+        }
     }
 
     const onInput = (e) =>{
@@ -31,7 +38,7 @@ const AddToDo = ({onSend, userState, setUserState, setError}) => {
 
     return (
         <div className="to-send">
-            <input className="new-todo" value={ todo } onChange={ onInput } placeholder="Enter message"/>
+            <input className="new-todo" value={ todo } onChange={ onInput } placeholder="Enter Task Name"/>
             <button className="add" onClick={ sendTodo }>Send</button>
         </div>
 
