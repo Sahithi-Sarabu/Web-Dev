@@ -1,24 +1,24 @@
 .light {
-  background-color: white;
-  color: black;
+	background-color: white;
+	color: black;
 }
 
 .dark {
-  background-color: black;
-  color: white;
-  height: 600px;
-  width: 100%;
+	background-color: black;
+	color: white;
+	height: 600px;
+	width: 100%;
 }
 
 .colorful {
-  background-color: #ccff99;
-  color: #336600;
-  height: 600px;
-  width: 100%;
+	background-color: #ccff99;
+	color: #336600;
+	height: 600px;
+	width: 100%;
 }
 
 body{
-  margin: 0;
+	margin: 0;
 }
 
 .login{
@@ -66,14 +66,14 @@ h2{
 }
 
 .theme{
-  float: right;
-  margin-right: 17%;
-  margin-top: -5.8%;
+  	float: right;
+  	margin-right: 17%;
+  	margin-top: -5.8%;
 }
 
 .themes{
-  font-size: 25px;
-  font-family: 'Rancho', cursive;
+  	font-size: 25px;
+  	font-family: 'Rancho', cursive;
 }
 
 .to-send {
@@ -83,40 +83,40 @@ h2{
 }
 
 .filters {
-  margin-top: 20px;
-  margin-left: 13%;
+  	margin-top: 20px;
+  	margin-left: 13%;
 }
 
 .radio{
-  font-size: 20px;
-  font-family: 'Rancho', cursive;
+  	font-size: 20px;
+  	font-family: 'Rancho', cursive;
 }
 
 .filter{
-  font-size: 20px;
-  font-family:'Gordana', cursive;
+  	font-size: 20px;
+  	font-family:'Gordana', cursive;
 }
 
 .refresh, .done, .update , .delete{
-  font-size: 20px;
-  font-family: 'Rancho', cursive;
-  border-radius: 15%;
+	font-size: 20px;
+  	font-family: 'Rancho', cursive;
+  	border-radius: 15%;
 }
 
 .newTask {
-  font-size: 20px;
-  font-family: 'Rancho', cursive;
+  	font-size: 20px;
+  	font-family: 'Rancho', cursive;
 }
 
 .task-info{
-  width: 700px;
-  display:grid;
-  grid-template-columns: 1fr 3fr 0.8fr;
+  	width: 700px;
+  	display:grid;
+  	grid-template-columns: 1fr 3fr 0.8fr;
 }
 
 .todos{
-  list-style: none;
-  margin-left: 20%;
+  	list-style: none;
+  	margin-left: 20%;
 }
 
 
