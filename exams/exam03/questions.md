@@ -10,30 +10,33 @@
 ## Q1: I have said that React JSX components are like functions and follow many of the same best practices.  Give at least 2 such best practices that are good for both JS functions and JSX Components.  (Be substantive!)
 
 ##A: 1 Both JSX Components and functions need to be small and specific to a functionality
-            Having smaller components and functions make debugging and maintainance easy. If we have any changes we can only update at a single place rather than complicating and messing things.
+            Having smaller components and functions make debugging and maintainance easy. Incase of changes, updating at a single place completes the job.
     2 Reusablility
-           By having components or functions specific to one functionality improves reusablity. The same part of the code can be used multiple times and in multiple ways hence keeping our code DRY
+           By having components or functions specific to one functionality improves reusablity. The same part of the code can be used multiple times and in multiple ways hence having our code DRY.
     3 Naming according to functionality
-           It is preferable to name our functions according to the functionality they provide. Hence it would be easy for others to understand the context/purpose without actually reading our code. Also, improper naming can limit reusability of the code.
+           It is preferable to name our functions according to the functionality they provide. As, it would be easy for others to understand the context/purpose without actually reading our code. Also, improper naming can limit reusability of the code.
     4 Commenting where ever necessary
-          Commenting only where it is necessary will make the code appear clutter free and also avoids the chances of mixing the code and comments if the code is changed at a later point.
+          Commenting only where it is necessary will make the code appear clutter free and also avoids the chances of mixing the code and comments if the code is changed at a later point of time.
 
 ## Q2: I have said that using Progressive Enhancement (supporting both MPA and SPA) is best, but many places don't do so because of the effort involved.  What is at least one major reason not to use SPA alone?
 
 ##A: Problems of having only SPA:
-     1. If the user has turned off browser side javascript or might be using an outdated browser, then the application wouldn't perform to its full extent and also may not perform correctly.
-     2. Security concerns raise as front-end is fully available to the user and can be manipulated.
-     3. And all clients wouldn't be browsers, so JS would not be present at their end. Like search engines wouldn't run JS and get the results as expected except a few big search engines.
-     4. Also if various devices are being used with Internet Of Things then those devices wouldn't have JS and wouldn't understand the page lokking at.
-
+     1. If the user has turned off browser side javascript or might be using an outdated browser, then the application wouldn't perform to its full extent or may not perform as expected.
+     2. Security concerns may raise as front-end is fully available to the user and can be manipulated.
+     3. And all clients wouldn't be browsers, so JS would not be present at their end. Like search engines wouldn't run JS and hence wouldn't get the results as expected except a few big search engines.
+     4. Also if various devices are being used with Internet Of Things then those devices wouldn't have JS and wouldn't understand the page pointing at.
 
 ## Q3: The "proxy" setting in your package.json is required for the create-react-app dev server to call a local service, but not if you are calling a service that will always be on a different domain.  Explain what happens (in terms of network traffic) when your dev server is running on localhost port 3000 and the page makes a call to `/service` when you have "proxy" set to `http://localhost:4000` and a server running on localhost port 4000 that has the `/service` service.  hint: This should list and describe multiple request/response steps.
 
 ##A : The call to `/service` is made to port 3000 initally and it checks if there is any service `/service` in it's server and as it doesn't find any, it sends the request to proxy server it has which is to port 4000. The port responds with the response, which is received by port 3000 and sents to the user.
 
+Client --> server at 3000 ('/service')[/service not present, So checks proxy] --> proxy server 4000 (/service) [present, hence responds with response] --> Response to 3000 --> Response to client
+
 ## Q4: Follow-up: Using the above scenario, list and describe what the network calls are like after you run `npm run build` and are only running all of your content on localhost port 4000 when your JSX makes a call to `/service`
 
 ##A: Once the command `npm run build` is given, we generate static files and the server will be running on port 4000 and hence the call to `/service` goes directly to 4000 which has the request with it. The server serves the request to the user directly.
+
+Client --> server at 4000 (static files being served) [present ] --> Responds with response to Client
 
 ## Q5: I have said that you can only pass data "down" in React, not "up".  What does that mean?  Give simple code sample if that makes it easier to describe.
 
@@ -52,15 +55,15 @@ Inside Chat,
 const Chat = ({ userState}) => {
   return (
     <div>
-      <p>Welcome to the Chat Online, {userState.username}</p>
+      <p>Welcome to the Chat Online, Status : {userState.isLoggedIn}</p>
     </div>
   );
 };
-The userState is being passed as props to the chat component where the user who is loggedin can see a welcome message.
+The userState is being passed as props to the chat component where the user who is loggedin can see a welcome message with status passed as a prop.
 
 ## Q6: Follow-up: If you can't pass data "up" the component tree, how can anything that is "down" change data?  Give simple code samples if that makes it easier to describe.
 
-##A: The data passes from top to the children components.And the children components generate events like change in input or a button click which gets handled by the parent component, therefore using callback the data  can be modified by the children components.
+##A: The data passes from top to the children components.And the children components generate events like change in input or a button click which gets handled using callback by the parent component and the data  gets modified by the children components.
 
 Example: In App:
 const App =() => {
@@ -117,7 +120,7 @@ let id = 0;
 
  Though having records 1 and 3 with same name, we can easily differentiate both students by storing the records in an object with id as keys.
 
- Array would be a better option to store steps of pizza making as here we don't need to identify any unique steps, and also there is an order to be followed to make a pizza, and also we need to iterate over entire array to make a pizza. And hence using an array to store data would be a good choice.
+ Array would be a better option to store steps of pizza making as we have an order to be followed to make a pizza and we don't need to identify any unique steps. Also we need to iterate over entire array to make a pizza. Therefore, using an array to store data would be a good choice.
 
  const steps = [];
 
@@ -158,9 +161,9 @@ Though a username has a value assigned, but it being undefined, we will still ha
 
 ## Q10: What is decoupling?  What is an example of decoupling in a React app?
 
-##A: Decoupling is to maintain separate files or to write separate functions of code for each functionality rather than putting entire logic in one component.With decoupling changes to code can be done at only required places when any requirements change, without effecting the rest of the code. Decoupling in react is to separate out functionalities of components, which means to have one component per file and make reusable components. And also separating Vanilla JS from JSX components.
+##A: Decoupling is to maintain separate files or to write separate functions of code for each functionality rather than putting entire logic in one component.With decoupling, changes to code can be done at only required places when any requirements change, without effecting the rest of the code. Decoupling in react is to separate out functionalities of components, which means to have one component per file and make reusable components. Having separate components we can improve resuablity, and use those components at multiple projects. Decoupling also means separating Vanilla JS from JSX components.
 
 Example:
- Consider the example of chat application, we may have a login component and logout component separate from main app. These components can be re-used for multiple projects. Also, we can separate out services(which has fetch calls to the server) from React and have services as pure javaScript file rather than a jsx file.This way React components and Vanilla JS can be separated and can be re-used in multiple places as required. If these two files were combined, that would be used only to this project. But separating out both, we can reuse any of them at different projects without the other file. Decoupling enhances reusability and also enhances the testing quality.
+ Consider the example of chat application, we may have a login component and logout component separate from main app. These components can be re-used for multiple projects. Also, we can separate out services(which has fetch calls to the server) from React and have services as pure JavaScript file rather than a JSX Component.This way React components and Vanilla JS can be separated and can be re-used in multiple places as required. If these two files were combined, that would be used only to this project. But separating out both, we can reuse any of them at different projects without the other file. Decoupling enhances reusability and also enhances the testing quality.
 
 
