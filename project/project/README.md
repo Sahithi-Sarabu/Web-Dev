@@ -1,7 +1,7 @@
 Zwitter Application
 
 About
-•	This application has some functionalities like Twitter.
+•	This application has some functionalities like Twitter created using Create React App.
 •	A user can post new messages from Home page.
 •	Each message has a counter indicating the number of likes it received.
 •	Messages posted by user are visible on both Home page and Profile page.
